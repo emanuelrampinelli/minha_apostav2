@@ -1,12 +1,13 @@
 package com.minha.aposta.manel.model;
 
 import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "CATEGORIA")
+@Table(name = "CATEGORIA_ESPORTE")
 @Data
-public class Categoria {
+public class CategoriaEsporte {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -15,3 +16,5 @@ public class Categoria {
     @Column(nullable = false)
     private String nome;
 }
+
+

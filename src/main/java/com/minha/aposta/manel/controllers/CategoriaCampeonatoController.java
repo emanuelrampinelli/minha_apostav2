@@ -1,8 +1,8 @@
 package com.minha.aposta.manel.controllers;
 
-import com.minha.aposta.manel.dtos.CategoriaDTO;
-import com.minha.aposta.manel.model.Categoria;
-import com.minha.aposta.manel.services.CategoriaService;
+import com.minha.aposta.manel.dtos.CategoriaEsporteDTO;
+import com.minha.aposta.manel.model.CategoriaCampeonato;
+import com.minha.aposta.manel.services.CategoriaCampeonatoService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/categoria")
-public class CategoriaController {
+@RequestMapping("/categoriaEquipe")
+public class CategoriaCampeonatoController {
 
     @Autowired
-    private CategoriaService categoriaService;
+    private CategoriaCampeonatoService categoriaService;
 
     @PostMapping
-    public ResponseEntity saveCategoria(@RequestBody CategoriaDTO categoriaDTO){
+    public ResponseEntity saveCategoria(@RequestBody CategoriaEsporteDTO categoriaEsporteDTO){
 
-        Categoria categoria = new Categoria();
-        BeanUtils.copyProperties(categoriaDTO, categoria);
+        CategoriaCampeonato categoria = new CategoriaCampeonato();
+        BeanUtils.copyProperties(categoriaEsporteDTO, categoria);
         categoriaService.saveCategoria(categoria);
         return ResponseEntity.status(HttpStatus.OK).body(null);
 
