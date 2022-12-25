@@ -26,4 +26,10 @@ public class Partida {
     @ManyToOne
     private CategoriaEsporte categoriaEsporte;
 
+    @ManyToOne
+    private CategoriaCampeonato categoriaCampeonato;
+
+    @Column
+    private String descricao;
+
 }

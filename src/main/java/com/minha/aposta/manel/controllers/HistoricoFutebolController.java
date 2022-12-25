@@ -1,8 +1,7 @@
 package com.minha.aposta.manel.controllers;
 
-import com.minha.aposta.manel.dtos.EquipeDTO;
-import com.minha.aposta.manel.services.EquipeService;
-
+import com.minha.aposta.manel.dtos.HistoricoFutebolDTO;
+import com.minha.aposta.manel.services.HistoricoFutebolService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,16 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/equipe")
-public class EquipeController {
+@RequestMapping("/historicoFutebol")
+public class HistoricoFutebolController {
 
     @Autowired
-    private EquipeService equipeService;
+    private HistoricoFutebolService historicoFutebolService;
 
     @PostMapping
-    public ResponseEntity saveEquipe(@RequestBody EquipeDTO equipeDTO){
-        equipeService.save(equipeDTO);
-        return ResponseEntity.status(HttpStatus.OK).body(null);
+    public ResponseEntity save (@RequestBody HistoricoFutebolDTO historicoFutebolDTO){
 
+        historicoFutebolService.save(historicoFutebolDTO);
+        return ResponseEntity.status(HttpStatus.OK).body(null);
     }
 }
