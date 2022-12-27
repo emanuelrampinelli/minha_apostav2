@@ -18,13 +18,10 @@ public class Partida {
     private Date dataEvento;
 
     @ManyToOne
-    private Equipe equipeA;
+    private Equipe equipeCasa;
 
     @ManyToOne
-    private Equipe equipeB;
-
-    @ManyToOne
-    private CategoriaEsporte categoriaEsporte;
+    private Equipe equipeVisitante;
 
     @ManyToOne
     private CategoriaCampeonato categoriaCampeonato;

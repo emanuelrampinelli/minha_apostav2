@@ -15,10 +15,4 @@ public class Equipe {
     @Column(nullable = false)
     private String nome;
 
-    @ManyToOne
-    private CategoriaCampeonato categoriaCampeonato;
-
-    @ManyToOne
-    private CategoriaEsporte categoriaEsporte;
-
 }

@@ -1,6 +1,6 @@
 package com.minha.aposta.manel.controllers;
 
-import com.minha.aposta.manel.dtos.CategoriaEsporteDTO;
+import com.minha.aposta.manel.dtos.CategoriaCampeonatoDTO;
 import com.minha.aposta.manel.model.CategoriaCampeonato;
 import com.minha.aposta.manel.services.CategoriaCampeonatoService;
 import org.springframework.beans.BeanUtils;
@@ -20,10 +20,10 @@ public class CategoriaCampeonatoController {
     private CategoriaCampeonatoService categoriaService;
 
     @PostMapping
-    public ResponseEntity saveCategoria(@RequestBody CategoriaEsporteDTO categoriaEsporteDTO){
+    public ResponseEntity saveCategoria(@RequestBody CategoriaCampeonatoDTO categoriaCampeonatoDTO){
 
         CategoriaCampeonato categoria = new CategoriaCampeonato();
-        BeanUtils.copyProperties(categoriaEsporteDTO, categoria);
+        BeanUtils.copyProperties(categoriaCampeonatoDTO, categoria);
         categoriaService.saveCategoria(categoria);
         return ResponseEntity.status(HttpStatus.OK).body(null);
 

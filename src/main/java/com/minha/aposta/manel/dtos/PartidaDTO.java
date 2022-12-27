@@ -4,9 +4,8 @@ import lombok.Data;
 public class PartidaDTO {
 
     private String dataEvento;
-    private Long idEquipeA;
-    private Long idEquipeB;
-    private Long idCategoriaEsporte;
+    private Long idEquipeCasa;
+    private Long idEquipeVisitante;
     private Long idCategoriaCampeonato;
     private String descricao;
 }

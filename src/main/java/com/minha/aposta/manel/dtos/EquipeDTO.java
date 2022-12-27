@@ -7,6 +7,5 @@ public class EquipeDTO {
 
     private Long id;
     private String nome;
-    private Long idCategoriaEsporte;
-    private Long idCategoriaCampeonato;
+
 }

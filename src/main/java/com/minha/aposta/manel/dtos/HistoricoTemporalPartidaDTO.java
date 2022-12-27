@@ -2,7 +2,13 @@ package com.minha.aposta.manel.dtos;
 import lombok.Data;
 
 @Data
-public class HistoricoFutebolDTO {
+public class HistoricoTemporalPartidaDTO {
+
+    private String tipoTempo;
+
+    private int golCasa;
+
+    private int golVisitante;
 
     private int escanteioCasa;
 
@@ -15,16 +21,6 @@ public class HistoricoFutebolDTO {
     private int cartaoVermelhoCasa;
 
     private int cartaoVermelhoVisitante;
-
-    private int golCasa;
-
-    private int golVisitante;
-
-    private int totalEscanteio;
-
-    private int totalCartao;
-
-    private int totalGol;
 
     private Long  idPartida;
 }

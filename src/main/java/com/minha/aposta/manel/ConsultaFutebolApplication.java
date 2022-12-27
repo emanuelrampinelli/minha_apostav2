@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ManelApplication {
+public class ConsultaFutebolApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ManelApplication.class, args);
+		SpringApplication.run(ConsultaFutebolApplication.class, args);
 	}
 
 }
